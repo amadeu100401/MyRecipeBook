@@ -1,20 +1,51 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Projeto MyRecipeBook Backend em .NET com MySQL
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Este é um projeto de backend desenvolvido em .NET que utiliza MySQL como banco de dados.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Requisitos
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Certifique-se de ter os seguintes requisitos instalados em seu sistema:
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+- .NET SDK 
+- MySQL Server 
+- Visual Studio ou Visual Studio Code (opcional)
+
+## Configuração do Banco de Dados
+
+1. Instale e configure o MySQL Server em sua máquina.
+2. Crie um novo banco de dados para o projeto.
+3. Configure as credenciais de acesso ao banco de dados no arquivo `appsettings.json`:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=NomeDoBancoDeDados;Uid=Usuario;Pwd=Senha;"
+  }
+}
+```
+
+Substitua NomeDoBancoDeDados, Usuario e Senha pelas informações corretas.
+
+Executando o Projeto
+Clone este repositório em sua máquina.
+Abra o projeto em seu ambiente de desenvolvimento (Visual Studio ou Visual Studio Code).
+Restaure as dependências do projeto utilizando o comando:
+
+dotnet restore
+
+Execute as migrações do banco de dados para criar as tabelas necessárias:
+dotnet ef database update
+
+Execute o projeto utilizando o comando:
+dotnet run
+
+O servidor estará sendo executado em http://localhost:5000.
+
+Contribuindo
+Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas funcionalidades. Basta abrir uma issue ou enviar um pull request.
+
+Licença
+Este projeto está licenciado sob a MIT License.
+
+Basta copiar e colar esse conteúdo em um arquivo Markdown (.md) e adaptar conforme necessário.
+
